@@ -24,12 +24,14 @@ MainView.prototype = {
 
   display: function() {
     var pictureSpace = document.getElementById( 'picture-space' );
+    // pictureSpace;
     var list = document.createElement( 'ul' );
     pictureSpace.appendChild( list );
     for( var i = 0; i < this.pictures.length; i++ ) {
       var picture = document.createElement( 'img' );
       var text = this.pictures[i].url;
       picture.src = text;
+      picture.style.maxWidth = 40 + "%"
       list.appendChild( picture );
     }
   },
