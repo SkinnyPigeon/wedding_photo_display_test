@@ -25,7 +25,7 @@ MainView.prototype = {
   pickPhoto: function() {
     this.lengthCheck();
     this.newPhotoCheck();
-    this.randomNumber();
+    // this.randomNumber();
     var link = this.photos[ this.position ];
     this.position += 1;
     return link;
@@ -72,7 +72,6 @@ MainView.prototype = {
   },
 
   display: function() {
-          console.log( this.pictures );
     var pictureSpace = document.getElementById( 'picture-space' );
     pictureSpace.innerText = "";
     var max = this.pictures.length - 1;
