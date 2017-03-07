@@ -144,7 +144,7 @@
 	  pickPhoto: function() {
 	    this.lengthCheck();
 	    this.newPhotoCheck();
-	    // this.randomNumber();
+	    this.randomNumber();
 	    var link = this.photos[ this.position ].url;
 	    this.position += 1;
 	    console.log( this.position );
@@ -165,6 +165,12 @@
 	      this.loopCheck = false;
 	    }
 	  },
+	
+	  randomNumber: function() {
+	    if( this.loopCheck ) {
+	      this.position = Math.floor(Math.random() * (this.lastPhoto - 1));
+	    }
+	  }
 	
 	
 	};
